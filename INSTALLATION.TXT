@@ -1,0 +1,48 @@
+Step 1: Download the VirtualBox Package
+
+If you haven't already, download the VirtualBox .deb package for your version of Ubuntu from the VirtualBox downloads page.
+Step 2: Open Terminal
+
+Press Ctrl + Alt + T to open a terminal.
+Step 3: Navigate to the Download Directory
+
+Change to the directory where you downloaded the package. For example, if you downloaded it to your "Downloads" folder, run:
+
+bash
+
+cd ~/Downloads
+
+Step 4: Install Dependencies
+
+Before installing VirtualBox, ensure you have the required dependencies:
+
+bash
+
+sudo apt install -y dkms linux-headers-$(uname -r)
+
+Step 5: Install the Downloaded Package
+
+Now, use dpkg to install the downloaded VirtualBox package. 
+
+
+NOTE ::: Replace virtualbox-*.deb with the actual filename of the downloaded package:
+
+bash
+
+sudo dpkg -i virtualbox-*.deb
+
+Step 6: Fix Any Dependency Issues
+
+If there are any missing dependencies, you can fix them with:
+
+bash
+
+sudo apt-get install -f
+
+Step 7: Launch VirtualBox
+
+After the installation completes, you can start VirtualBox by searching for it in your applications menu or by typing the following command in the terminal:
+
+bash
+
+virtualbox
